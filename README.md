@@ -4,14 +4,12 @@
 
 # Data tables given for testing on local system along with API code
 
-# dashboard image
-
-![Screenshot](Screenshot(433).png)
+# Dashboard image
+![Screenshot](Screenshot(435).png)
 
 # Database image
 
-![Screenshot](Screenshot(435).png)
-
+![Screenshot](Screenshot(433).png)
 
 
 
