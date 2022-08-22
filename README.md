@@ -1,3 +1,21 @@
+# Application made with React, HTML,CSS and JavaScript;
+
+# Mock API made thorugh Mockoon
+
+# Data tables given for testing on local system along with API code
+
+# dashboard image
+
+![Screenshot](Screenshot (433).png)
+
+# Database image
+
+![Screenshot](Screenshot (435).png)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

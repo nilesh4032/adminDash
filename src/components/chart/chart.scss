@@ -1,0 +1,44 @@
+.chart{
+    flex:5;
+    -webkit-b0x-shadow:2px 4px, 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    padding:10px;
+    max-width: 600px;
+    .top{
+       
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+            width: 100%;
+    }
+    .left{
+        display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding:3px;
+            border-bottom: 2px;
+            .toggle{
+                padding: 5px;
+                cursor: pointer;
+            }
+    }
+    .right{
+        position: relative;
+       justify-content: flex-end;
+      
+        display: flex;
+            width: 100%;
+            flex-direction: row;
+            .time{
+                padding: 4px;
+               
+                cursor: pointer;
+            }
+            
+    }
+    .title{
+        margin-left: 40px;
+        margin-bottom: 6px;
+    }
+}
