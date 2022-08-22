@@ -6,11 +6,11 @@
 
 # dashboard image
 
-![Screenshot](Screenshot (433).png)
+![Screenshot](Screenshot(433).png)
 
 # Database image
 
-![Screenshot](Screenshot (435).png)
+![Screenshot](Screenshot(435).png)
 
 
 
