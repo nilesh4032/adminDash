@@ -7,9 +7,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import HelpIcon from '@mui/icons-material/Help';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {Link} from "react-router-dom"
-const Sidebar=()=>{
-    return(
-        <div className="sidebar">
+
+import React, { Component } from 'react';
+
+class Sidebar extends Component {
+    render() {
+        return (
+            <div>
+               <div className="sidebar">
             <div className="top">
                
  <Link to="/" style={{textDecoration: 'none',color: 'white'}}>
@@ -69,7 +74,11 @@ const Sidebar=()=>{
                         </li>   </Link>           
                           </ul>
             </div>
-        </div>
-    )
+        </div>  
+            </div>
+        );
+    }
 }
+
 export default Sidebar;
+

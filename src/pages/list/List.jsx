@@ -1,22 +1,39 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import Widget from "../../components/listWid/ListWidget";
+import ListWidget from "../../components/listWid/ListWidget";
 import PieCon from "../../components/pie/PieCon";
 import ListChart from "../../components/listChart/ListChart";
 import  "./list.scss";
-const List = () => {
-  return (
-    <div>
+import React, { Component } from 'react';
+
+class List extends Component {
+
+  constructor(props) {
+        super(props);
+        this.state = {data:[]};
+    }
+    componentDidMount() {
+        fetch('https://630665a5c0d0f2b8011c685e.mockapi.io/listWid').then(res=>res.json()).then(res=>this.setState({data:res}))
+    }
+  render() {
+    return (
+      <div>
+        <div>
      <div className="home">
        <Sidebar/>
        <div className="homeContainer">
         <Navbar/>
         <div className="widgets">
-           < Widget type="Invoice Received"/>
-           < Widget type="Auto Posting"/>
-           < Widget type="TAT to Post"/>
-           < Widget type="TAT to Payment"/>
-           < Widget type="No of Invoices"/>
+           {/* < ListWidget type="Invoice Received"/>
+           < ListWidget type="Auto Posting"    />
+           < ListWidget type="TAT to Post"/>
+           < ListWidget type="TAT to Payment"/>
+           < ListWidget type="No of Invoices"/> */}
+            {this.state.data.map((props)=>{
+              
+          return <ListWidget props={props} />
+
+        })}
         </div>
 
             <div className="charts">
@@ -29,7 +46,10 @@ const List = () => {
     </div>
       
     </div>
-  )
+      </div>
+    );
+  }
 }
 
-export default List
+export default List; 
+

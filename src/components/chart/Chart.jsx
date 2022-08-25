@@ -1,76 +1,64 @@
 import "./chart.scss";
-//import React, {Component} from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import axios from 'axios';
-import React,{useEffect} from 'react';
-
-const data = [
-  {
-    name: '1',
+// const data = [
+//   {
+//     id:1,
    
-    sold: 200,
-    amt: 200,
-  },
-  {
-    name: '2',
+//     sold: 200,
+//     amt: 200,
+//   },
+//   {
+//     id:2,
     
-    sold: 400,
-    amt: 400,
-  },
-  {
-    name: '3',
-    sold: 600,
-    amt: 600,
-  },
-  {
-    name: '4',
-   
-    sold: 800,
-    amt: 800,
-  },
-  {
-    name: '5',
-    
-    sold: 1000,
-    amt: 1000,
-  },
-  {
-    name: '6',
- 
-    sold: 1200,
-    amt: 1200,
-  },
-  {
-    name: '7',
-    
-    sold: 1400,
-    amt: 1400,
-  },
-];
-
-
-
-// const Search=()=>{
-
-
-// let API="http://127.0.0.1:30002/data";
-// const fetch=async(url)=>{
-//   try{
-//     const res=await(fetch(url));
-//     const data=res.json();
-//   }catch(error){
-//     console.log(error);
+//     sold: 400,
+//     amt: 400,
+//   },
+//   {
+//     id:3,
+//     sold: 600,
+//     amt: 600,
+//   },
+//   {
+// id:4,   
+//     sold: 800,
+//     amt: 800,
+//   },
+//   {
+// id:5,    
+//     sold: 1000,
+//     amt: 1000,
+//   },
+//   {
+// id:6, 
+//     sold: 1200,
+//     amt: 1200,
+//   },
+//   {
+// id:7,    
+//     sold: 1400,
+//     amt: 1400,
 //   }
-// }
-// useEffect(() => {
-//   fetch(API);
-  
-// }, []);
-// }
-const Chart = () => {
- 
-  return (
-    <div className="chart">
+// ];
+
+import React, { Component } from 'react';
+
+
+
+class Chart extends Component {
+
+//api call 
+
+ constructor(props) {
+        super(props);
+        this.state = {data:[]};
+    }
+    componentDidMount() {
+        fetch('https://63062aa3c0d0f2b801173742.mockapi.io/dchart').then(res=>res.json()).then(res=>this.setState({data:res}))
+    }
+
+  render() {
+    return (
+      <div className="chart">
         <div className="top">
         <div className="left">
        
@@ -90,8 +78,8 @@ const Chart = () => {
 
     </div>
     </div>
-     <BarChart width={600} height={350} data={data}>
-  <CartesianGrid strokeDasharray="3 3" />
+     <BarChart width={600} height={350} data={this.state.data}>
+ 
   <XAxis dataKey="name" />
   <YAxis />
   <Tooltip />
@@ -100,7 +88,8 @@ const Chart = () => {
   
 </BarChart>
     </div>
-  )
+    );
+  }
 }
 
-export default Chart ;
+export default Chart;

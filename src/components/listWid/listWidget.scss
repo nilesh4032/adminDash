@@ -1,4 +1,4 @@
-.widget{
+.listwidget{
     display: flex;
         flex: 1;
         padding: 10px;
@@ -18,7 +18,7 @@
             display: flex;
             width: 100%;
             flex-direction: column;
-         justify-content: space-between;
+       
             .title {
                 font-size: 30px;
                 font-weight: bold;

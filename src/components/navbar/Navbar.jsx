@@ -1,9 +1,14 @@
 import "./navbar.scss";
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import {Link} from "react-router-dom" 
-const Navbar = () => {
-  return (
-    <div className="navbar">
+
+import React, { Component } from 'react'
+
+export default class Navbar extends Component {
+  render() {
+    return (
+      <div>
+        <div className="navbar">
         <div className="wrapper">
             <div className="item">
                 <Link to="/" style={{textDecoration: 'none'}}>
@@ -22,6 +27,7 @@ const Navbar = () => {
         </div>
       
     </div>
-  )
+      </div>
+    )
+  }
 }
-export default Navbar;
