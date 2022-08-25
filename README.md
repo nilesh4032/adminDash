@@ -7,9 +7,6 @@
 # Dashboard image
 ![Screenshot](Screenshot(435).png)
 
-# Database image
-
-![Screenshot](Screenshot(433).png)
 
 
 
