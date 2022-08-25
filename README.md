@@ -7,6 +7,8 @@
 # Dashboard image
 ![Screenshot](Screenshot(435).png)
 
+ Please click on task list to move to other page
+
 
 
 
