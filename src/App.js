@@ -10,9 +10,15 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-function App() {
-  return (
-    <div className="App">
+
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <div className="App">
        <BrowserRouter>
     <Routes>
       <Route path="/">
@@ -34,7 +40,8 @@ function App() {
     </Routes>
   </BrowserRouter>
     </div>
-  );
+      </div>
+    )
+  }
 }
 
-export default App;
