@@ -1,8 +1,8 @@
 # Application made with React, HTML,CSS and JavaScript;
 
-# Mock API made thorugh Mockoon
+# Mock API made thorugh Mockapi.io
 
-# Data tables given for testing on local system along with API code
+# Data tables given(commented) for testing on local system along with API code
 
 # Dashboard image
 ![Screenshot](Screenshot(435).png)
